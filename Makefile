@@ -12,7 +12,7 @@ all: $(LIB_NAME) $(TESTS_BIN_NAME)
 $(LIB_NAME): $(OBJS)
 	ar rcs $(LIB_NAME) $^
 
-$(TESTS_BIN_NAME): $(LIB_NAME) tests.c
+$(TESTS_BIN_NAME): tests.c $(LIB_NAME)
 	cc $(CFLAGS) -o $(TESTS_BIN_NAME) $^
 
 clean:
