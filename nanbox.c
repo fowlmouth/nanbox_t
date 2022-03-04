@@ -1,6 +1,7 @@
 #define NANBOX_IMPLEMENTATION
 #include "nanbox.h"
 
+#include <inttypes.h>
 #include <stdio.h>
 #include <math.h>
 
@@ -91,8 +92,8 @@ void nan_dump(nanbox_t nan)
   nanbox_value_t value = {.as_real = nan};
   printf(
     "number: %f\n"
-    "  isnan= %d  bits= 0x%016llx\n"
-    "  type= %d  int= %lld  ptr= %p\n\n",
+    "  isnan= %d  bits= 0x%016"PRIx64"\n"
+    "  type= %d  int= %"PRId64"  ptr= %p\n\n",
     nan,
     isnan(nan), value.as_bits,
     nan_get_type(nan), nan_get_int(nan), nan_get_ptr(nan));
