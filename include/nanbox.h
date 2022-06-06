@@ -30,7 +30,7 @@ typedef NANBOX_INT_TYPE nanbox_int_t;
 typedef NANBOX_PTR_TYPE nanbox_ptr_t;
 
 #ifdef __cplusplus
-# extern "C" {
+extern "C" {
 #endif
 
 nanbox_t mk_nan();
