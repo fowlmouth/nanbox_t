@@ -5,7 +5,8 @@ OBJS := nanbox.o
 LIB_NAME := libnanbox.a
 TESTS_BIN_NAME := nanbox-tests
 
-CFLAGS = -std=c17 -Iinclude/ -Wall
+EXTRA_CFLAGS ?= 
+CFLAGS = -std=c17 -Iinclude/ -Wall $(EXTRA_CFLAGS)
 
 all: $(LIB_NAME) $(TESTS_BIN_NAME)
 

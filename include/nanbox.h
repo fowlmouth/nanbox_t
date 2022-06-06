@@ -29,6 +29,9 @@ typedef NANBOX_FLOAT_TYPE nanbox_t;
 typedef NANBOX_INT_TYPE nanbox_int_t;
 typedef NANBOX_PTR_TYPE nanbox_ptr_t;
 
+#ifdef __cplusplus
+# extern "C" {
+#endif
 
 nanbox_t mk_nan();
 
@@ -45,5 +48,9 @@ nanbox_ptr_t nan_get_ptr(nanbox_t nan);
 nanbox_t nan_set_ptr(nanbox_t nan, nanbox_ptr_t value);
 
 void nan_run_tests();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
